@@ -1,0 +1,33 @@
+# Временные файлы LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.bcf
+*.run.xml
+*.idx
+*.ind
+*.ilg
+*.synctex(busy)
+*.pdf
+
+# Файлы пакета minted (подсветка кода)
+_minted-*/
+*.pytxcode
+
+
+
+# Системные файлы Windows/macOS
+.DS_Store
+Thumbs.db
+
+# Настройки рабочей области VS Code (опционально)
+.vscode/
