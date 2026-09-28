@@ -1,3 +1,19 @@
+% Ключевой источник для понятия order of conflict в инженерии требований.
+% Обосновывает несостоятельность попарного сравнения требований для многокомпонентных конфликтов.
+@article{salado2016order,
+    author = {Salado, Alejandro and Nilchiani, Roshanak},
+    title = {The Concept of Order of Conflict in Requirements Engineering},
+    journal = {IEEE Systems Journal},
+    volume = {10},
+    number = {1},
+    pages = {25--35},
+    year = {2016},
+    publisher = {IEEE},
+    doi = {10.1109/JSYST.2014.2315597},
+    url = {https://doi.org/10.1109/JSYST.2014.2315597}
+}
+
+% Базовая статья о классификации и природе конфликтов требований (SAT/UNSAT).
 @article{lamsweerde1998,
   title={Managing Conflicts in Goal-Driven Requirements Engineering},
   author={van Lamsweerde, Axel and Darimont, Robert and Letier, Emmanuel},
@@ -9,18 +25,8 @@
   publisher={IEEE}
 }
 
-@article{salado2016order,
-    author = {Salado, Alejandro and Nilchiani, Roshanak},
-    title = {The Concept of Order of Conflict in Requirements Engineering},
-    journal = {IEEE Systems Journal},
-    volume = {10},
-    number = {1},
-    pages = {25--35},
-    year = {2016},
-    doi = {10.1109/JSYST.2014.2315597},
-    url = {https://doi.org/10.1109/JSYST.2014.2315597}
-}
-
+% Практическое применение LLM (ChatGPT) для выявления несоответствий в требованиях.
+% Подтверждает способность моделей находить семантические нестыковки.
 @inproceedings{fantechi2023chatgpt,
     author = {Fantechi, Alessandro and Gnesi, Stefania and Passaro, Lucia C. and Semini, Laura},
     title = {Inconsistency Detection in Natural Language Requirements using ChatGPT: a Preliminary Evaluation},
@@ -32,6 +38,8 @@
     url = {https://doi.org/10.1109/RE57278.2023.00045}
 }
 
+% Прямой архитектурный аналог нейросимвольного пайплайна:
+% NLP -> Structured English -> TCTL -> SMT-LIB -> Z3.
 @inproceedings{bertram2023consistency,
     author = {Bertram, Vincent and Kausch, Hendrik and Kusmenko, Evgeny and Nqiri, Haron and Rumpe, Bernhard and Venhoff, Constantin},
     title = {Leveraging Natural Language Processing for a Consistency Checking Toolchain of Automotive Requirements},
@@ -43,6 +51,7 @@
     url = {https://doi.org/10.1109/RE57278.2023.00029}
 }
 
+% Нейросимвольный подход LINC: перевод естественного языка в логику первого порядка.
 @inproceedings{olausson2023linc,
     author = {Olausson, Theo and Gu, Alex and Lipkin, Ben and Zhang, Cedegao and Solar-Lezama, Armando and Tenenbaum, Joshua and Levy, Roger},
     title = {{LINC}: A Neurosymbolic Approach for Logical Reasoning by Combining Language Models with First-Order Logic Provers},
@@ -55,6 +64,7 @@
     url = {https://aclanthology.org/2023.emnlp-main.313/}
 }
 
+% Нейросимвольный подход SatLM: LLM как генератор декларативных спецификаций.
 @inproceedings{ye2023satlm,
     author = {Ye, Xi and Chen, Qiaochu and Dillig, Isil and Durrett, Greg},
     title = {{SatLM}: Satisfiability-Aided Language Models Using Declarative Prompting},
@@ -66,6 +76,8 @@
     url = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/8e9c7d4a48bdac81a58f983a64aaf42b-Abstract-Conference.html}
 }
 
+% Исследование пределов композиционности архитектуры трансформеров при логическом выводе.
+% Описывает падение точности LLM при росте сложности (длины цепочки).
 @inproceedings{dziri2023compositionality,
     author = {Dziri, Nouha and Lu, Ximing and Sclar, Melanie and Li, Xiang Lorraine and Jiang, Liwei and Lin, Bill Yuchen and West, Peter and Bhagavatula, Chandra and Le Bras, Ronan and Hwang, Jena D. and Sanyal, Soumya and Welleck, Sean and Ren, Xiang and Ettinger, Allyson and Harchaoui, Zaid and Choi, Yejin},
     title = {Faith and Fate: Limits of Transformers on Compositionality},
@@ -76,6 +88,7 @@
     url = {https://arxiv.org/abs/2305.18654}
 }
 
+% Гибридная система ALICE (LLM + формальная логика) для поиска противоречий.
 @article{gartner2024alice,
     author = {G{\"a}rtner, Alexander Elenga and G{\"o}hlich, Dietmar},
     title = {Automated Requirement Contradiction Detection through Formal Logic and LLMs},
@@ -87,6 +100,7 @@
     url = {https://doi.org/10.1007/s10515-024-00452-x}
 }
 
+% Свежее исследование: генерация SMT- и Python-чекеров требований силами LLM.
 @inproceedings{chen2025satisfiability,
     author = {Chen, Boqi and Babikian, Aren A. and Feng, Shuzhao and Varró, Dániel and Mussbacher, Gunter},
     title = {LLM-based Satisfiability Checking of String Requirements by Consistent Data and Checker Generation},
@@ -98,6 +112,7 @@
     url = {https://doi.org/10.1109/RE63999.2025.00030}
 }
 
+% Комбинирование возможностей LLM с классической кластеризацией для поиска конфликтов.
 @inproceedings{fantechi2025inconsistency,
     author = {Fantechi, Alessandro and Gnesi, Stefania and Semini, Laura},
     title = {Combining Established and Emerging Techniques to Detect Inconsistencies in Requirements},
@@ -109,6 +124,7 @@
     url = {https://doi.org/10.1109/RE63999.2025.00062}
 }
 
+% Систематический обзор применения LLM в инженерии требований за 2023-2024 гг.
 @misc{zadenoori2025llmre,
     author = {Zadenoori, Mohammad Amin and D{\k{a}}browski, Jacek and Alhoshan, Waad and Zhao, Liping and Ferrari, Alessio},
     title = {Large Language Models ({LLMs}) for Requirements Engineering ({RE}): A Systematic Literature Review},
@@ -120,6 +136,7 @@
     url = {https://arxiv.org/abs/2509.11446}
 }
 
+% Синтетический бенчмарк (RuleTaker) для проверки глубины логического вывода моделей.
 @inproceedings{clark2020ruletaker,
     author = {Clark, Peter and Tafjord, Oyvind and Richardson, Kyle},
     title = {Transformers as Soft Reasoners over Language},
@@ -130,6 +147,7 @@
     url = {https://www.ijcai.org/Proceedings/2020/537}
 }
 
+% Синтетический бенчмарк FOLIO с разметкой в First-Order Logic.
 @inproceedings{han2024folio,
     author = {Han, Simeng and Schoelkopf, Hailey and Zhao, Yilun and Qi, Zhenting and Riddell, Martin and Zhou, Wenfei and Coady, James and Peng, David and Qiao, Yujie and Benson, Luke and Sun, Lucy and Wardle-Solano, Alexander and Szab{\'o}, Hannah and Zubova, Ekaterina and Burtell, Matthew and Fan, Jonathan and Liu, Yixin and Wong, Brian and Sailor, Malcolm and Ni, Ansong and Nan, Linyong and Kasai, Jungo and Yu, Tao and Zhang, Rui and Fabbri, Alexander R. and Kryscinski, Wojciech Maciej and Yavuz, Semih and Liu, Ye and Lin, Xi Victoria and Joty, Shafiq and Zhou, Yingbo and Xiong, Caiming and Ying, Rex and Cohan, Arman and Radev, Dragomir},
     title = {{FOLIO}: Natural Language Reasoning with First-Order Logic},
@@ -142,6 +160,7 @@
     url = {https://aclanthology.org/2024.emnlp-main.1229/}
 }
 
+% Общий бенчмарк LogiQA для оценки многошагового вывода LLM.
 @inproceedings{liu2020logiqa,
     author = {Liu, Jian and Cui, Leyang and Liu, Hanmeng and Huang, Dandan and Wang, Yile and Zhang, Yue},
     title = {{LogiQA}: A Challenge Dataset for Machine Reading Comprehension with Logical Reasoning},
@@ -152,6 +171,7 @@
     url = {https://www.ijcai.org/proceedings/2020/501}
 }
 
+% Бенчмарк ReClor для проверки логики на основе экзаменационных вопросов.
 @inproceedings{yu2020reclor,
     author = {Yu, Weihao and Jiang, Zihang and Dong, Yanfei and Feng, Jiashi},
     title = {{ReClor}: A Reading Comprehension Dataset Requiring Logical Reasoning},
@@ -160,6 +180,7 @@
     url = {https://openreview.net/forum?id=HJgJtT4tvB}
 }
 
+% Базовая оригинальная публикация по SMT-решателю Z3.
 @inproceedings{demoura2008,
   title={Z3: An efficient SMT solver},
   author={De Moura, Leonardo and Bj{\o}rner, Nikolaj},
