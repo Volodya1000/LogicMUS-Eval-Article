@@ -45,12 +45,13 @@ jobs:
           bibtex main
           pdflatex -interaction=nonstopmode -halt-on-error -file-line-error main.tex
           pdflatex -interaction=nonstopmode -halt-on-error -file-line-error main.tex
+          mv main.pdf LogicMUS-Eval-Article.pdf
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: LogicMUS-Eval-Article-pdf
-          path: main.pdf
+          name: LogicMUS-Eval-Article
+          path: LogicMUS-Eval-Article.pdf
           if-no-files-found: error
           retention-days: 30
 
@@ -59,9 +60,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f main.pdf
+          git add -f LogicMUS-Eval-Article.pdf
           if git diff --cached --quiet; then
-            echo "main.pdf is unchanged."
+            echo "LogicMUS-Eval-Article.pdf is unchanged."
             exit 0
           fi
           git commit -m "docs: update compiled article PDF"
@@ -72,9 +73,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f main.pdf
+          git add -f LogicMUS-Eval-Article.pdf
           if git diff --cached --quiet; then
-            echo "main.pdf is unchanged."
+            echo "LogicMUS-Eval-Article.pdf is unchanged."
             exit 0
           fi
           git commit -m "docs: update compiled article PDF"
